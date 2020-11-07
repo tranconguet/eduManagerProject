@@ -89,10 +89,10 @@ class AnnouncementServices extends Services {
         await http.post(postAnnouncemnetUrl, body: body, headers: headers);
 
     if (response.statusCode == 200) {
-      print("Post posted Succesfully");
+      print("Đăng bài thành công");
       print(json.decode(response.body).toString());
     } else {
-      print("Post posting failed");
+      print("Đăng bài thất bại");
     }
   }
 }

@@ -21,7 +21,10 @@ class MyApp extends StatelessWidget {
         ),
         StreamProvider<FirebaseUser>.value(
           initialData: null,
-          value: locator<AuthenticationServices>().fireBaseUserStream.stream.asBroadcastStream(),
+          value: locator<AuthenticationServices>()
+              .fireBaseUserStream
+              .stream
+              .asBroadcastStream(),
         ),
         StreamProvider<UserType>.value(
           initialData: UserType.UNKNOWN,
@@ -65,7 +68,7 @@ class OurSchoolApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Our E-School',
+      title: 'Edu Mangager',
       theme: theme,
       routes: {
         WelcomeScreen.id: (context) => WelcomeScreen(),

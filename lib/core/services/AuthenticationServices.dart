@@ -42,14 +42,14 @@ class AuthenticationServices extends Services {
     await getFirebaseUser();
     fireBaseUserStream.add(firebaseUser);
     String name = firebaseUser != null ? firebaseUser.email.toString() : 'Null';
-    print('User Email :' + name);
+    print('Email :' + name);
     // if (firebaseUser == null) {
     //   await logoutMethod();
     // }
     isUserLoggedIn = firebaseUser == null ? false : true;
     isUserLoggedInStream.add(isUserLoggedIn);
     if (isUserLoggedIn) _profileServices.getLoggedInUserProfileData();
-    print(isUserLoggedIn.toString() + 'here');
+    print(isUserLoggedIn.toString() + 'đây');
     return isUserLoggedIn;
   }
 
@@ -75,7 +75,9 @@ class AuthenticationServices extends Services {
     bool isUserAvailable = false;
     String loginType = userType == UserType.STUDENT
         ? "Student"
-        : userType == UserType.TEACHER ? "Parent-Teacher" : "Parent-Teacher";
+        : userType == UserType.TEACHER
+            ? "Parent-Teacher"
+            : "Parent-Teacher";
 
     DocumentReference _schoolLoginRef =
         schoolRef.collection(schoolCode.toUpperCase().trim()).document('Login');
@@ -86,10 +88,10 @@ class AuthenticationServices extends Services {
     });
 
     if (!isSchoolPresent) {
-      print('School Not Found');
+      print('Không tìm thấy trường');
       return ReturnType.SCHOOLCODEERROR;
     } else {
-      print('School Found');
+      print('Đã tìm thấy trường');
     }
 
     CollectionReference _userRef = _schoolLoginRef.collection(loginType);

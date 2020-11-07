@@ -11,19 +11,19 @@ class AuthErrorsHelper {
   static String getValue(AuthErrors authError) {
     switch (authError) {
       case AuthErrors.UserNotFound:
-        return "No such User Found";
+        return "Không tìm thấy người dùng";
       case AuthErrors.PasswordNotValid:
-        return "Password is not valid";
+        return "Mật khẩu không đúng";
       case AuthErrors.NetworkError:
-        return "A network error has occurred, please try again";
+        return "Xảy ra lỗi mạng, vui lòng thử lại";
       case AuthErrors.SUCCESS:
-        return "Task performed succesfully";
+        return "Đăng nhập thành công";
       case AuthErrors.UNKNOWN:
-        return "Something went wrong!";
+        return "Lỗi đã xảy ra !";
       case AuthErrors.TOOMANYATTEMPTS:
-        return "Too many unsuccessful login attempts.  Please include reCaptcha verification or try again later";
+        return "Bạn đã nhập quá nhiều lần!";
       default:
-        return "opps, please Try again";
+        return "Vui lòng thử lại";
     }
   }
 }

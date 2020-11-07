@@ -29,13 +29,13 @@ class _LoginPageState extends State<LoginPage> {
         passwordController.text == null ||
         schoolNameController.text == null) {
       _scaffoldKey.currentState
-          .showSnackBar(ksnackBar(context, 'Please enter details properly'));
+          .showSnackBar(ksnackBar(context, 'Hãy nhập đầy đủ thông tin'));
     } else {
       if (emailController.text.trim().isEmpty ||
           passwordController.text.trim().isEmpty ||
           schoolNameController.text.trim().isEmpty) {
         _scaffoldKey.currentState
-            .showSnackBar(ksnackBar(context, 'Please enter details properly'));
+            .showSnackBar(ksnackBar(context, 'Hãy nhập đầy đủ thông tin'));
       } else {
         bool response = await model.checkUserDetails(
           email: emailController.text,
@@ -111,8 +111,8 @@ class _LoginPageState extends State<LoginPage> {
                         // CustomLoginTypeBtn(),
                         CustomRadioButton(
                           // horizontal: true,
-                          buttonColor: Theme.of(context).canvasColor,
-                          buttonLables: ['Student', 'Parent/Teacher'],
+                          unSelectedColor: Theme.of(context).canvasColor,
+                          buttonLables: ['Sinh viên', 'Phụ huynh/Giảng viên'],
                           buttonValues: [UserType.STUDENT, UserType.TEACHER],
                           radioButtonValue: (value) {
                             loginTypeSelected = value;

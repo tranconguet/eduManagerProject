@@ -101,7 +101,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                           AuthErrorsHelper.getValue(authError),
                         );
                       } else {
-                        ksnackBar(context, 'Email is Not Valid');
+                        ksnackBar(context, 'Email không hợp lệ');
                       }
                     },
                     height: 50,

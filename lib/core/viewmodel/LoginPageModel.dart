@@ -11,9 +11,8 @@ import 'package:ourESchool/locator.dart';
 class LoginPageModel extends BaseModel {
   final _authenticationService = locator<AuthenticationServices>();
   User _loggedInUser;
-  String currentLoggingStatus = 'Please wait'; 
+  String currentLoggingStatus = 'Please wait';
   User get loggedInUser => _loggedInUser;
-  
 
   // googleLogin() async {
   //   setState(ViewState.Busy);

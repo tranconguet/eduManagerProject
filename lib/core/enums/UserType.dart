@@ -4,11 +4,11 @@ class UserTypeHelper {
   static String getValue(UserType userType) {
     switch (userType) {
       case UserType.PARENT:
-        return "PARENT";
+        return "Phụ huynh";
       case UserType.STUDENT:
-        return "STUDENT";
+        return "Sinh viên";
       case UserType.TEACHER:
-        return "TEACHER";
+        return "Giảng viên";
       case UserType.UNKNOWN:
         return "UNKNOWN";
       default:
