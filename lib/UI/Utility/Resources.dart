@@ -117,7 +117,7 @@ Xem những bài đăng của trường để cập nhật thông tin.''';
   static const fees_paid = 'Phí đã trả';
 
 //E-card
-  static const e_card = 'E-Card';
+  static const e_card = 'Hồ sơ';
 
 //TimeTable
   static const timetable = 'Thời khóa biểu';

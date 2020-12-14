@@ -36,7 +36,7 @@ class _TeachersTimeTableState extends State<TeachersTimeTable> {
           ListTile(
             title: !edit
                 ? Text(
-                    'Lecture ${index + 1}',
+                    'Môn ${index + 1}',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
@@ -44,13 +44,13 @@ class _TeachersTimeTableState extends State<TeachersTimeTable> {
                 : TextField(
                     maxLines: 1,
                     expands: false,
-                    controller: TextEditingController(text: 'Subject name'),
+                    controller: TextEditingController(text: 'Tên môn'),
                     enableInteractiveSelection: true,
                     keyboardType: TextInputType.text,
                     autocorrect: true,
                     textInputAction: TextInputAction.done,
                     decoration: InputDecoration(
-                      labelText: 'Lecture ${index + 1}',
+                      labelText: 'Môn ${index + 1}',
                       labelStyle: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -68,19 +68,19 @@ class _TeachersTimeTableState extends State<TeachersTimeTable> {
                 ),
                 !edit
                     ? Text(
-                        "Standard ${index + 1}A",
+                        "Tiêu chuẩn ${index + 1}A",
                         style: TextStyle(fontWeight: FontWeight.w500),
                       )
                     : TextField(
                         maxLines: 1,
                         expands: false,
-                        controller: TextEditingController(text: 'Standard'),
+                        controller: TextEditingController(text: 'Tiêu chuẩn'),
                         enableInteractiveSelection: true,
                         keyboardType: TextInputType.text,
                         autocorrect: true,
                         textInputAction: TextInputAction.done,
                         decoration: InputDecoration(
-                          labelText: 'Standard + Div',
+                          labelText: 'Tiêu chuẩn + Div',
                           labelStyle: TextStyle(
                             fontWeight: FontWeight.bold,
                           ),
@@ -99,7 +99,7 @@ class _TeachersTimeTableState extends State<TeachersTimeTable> {
                 left: !edit ? 25 : 15, top: 5, right: !edit ? 25 : 15),
             child: !edit
                 ? Text(
-                    "$index:00 A.M  to  ${index + 1}:30 A.M",
+                    "$index:00 A.M  đến  ${index + 1}:30 A.M",
                     style: TextStyle(fontWeight: FontWeight.bold
                         // fontFamily: 'Ninto',
                         ),
@@ -117,7 +117,7 @@ class _TeachersTimeTableState extends State<TeachersTimeTable> {
                           autocorrect: true,
                           textInputAction: TextInputAction.done,
                           decoration: InputDecoration(
-                            labelText: 'Start time',
+                            labelText: 'Bắt đầu',
                             labelStyle: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),
@@ -125,7 +125,7 @@ class _TeachersTimeTableState extends State<TeachersTimeTable> {
                         ),
                       ),
                       Text(
-                        " to ",
+                        " đến ",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
@@ -142,7 +142,7 @@ class _TeachersTimeTableState extends State<TeachersTimeTable> {
                           autocorrect: true,
                           textInputAction: TextInputAction.done,
                           decoration: InputDecoration(
-                            labelText: 'End time',
+                            labelText: 'Kết thúc',
                             labelStyle: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),
@@ -159,7 +159,7 @@ class _TeachersTimeTableState extends State<TeachersTimeTable> {
               ? FlatButton(
                   onPressed: () {},
                   child: Text(
-                    'Save',
+                    'Lưu',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),

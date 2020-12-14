@@ -139,7 +139,7 @@ class HolidayDetailsPageState extends State<HolidayDetailsPage>
               child: currentMonthHolidayList.isEmpty
                   ? Center(
                       child: Text(
-                        "No holidays this month",
+                        "Không có ngày nghỉ tháng này",
                         style: Theme.of(context)
                             .textTheme
                             .headline
@@ -210,7 +210,7 @@ class HolidayDetailsPageState extends State<HolidayDetailsPage>
                                         leading: Text(""),
                                         title: Text(
                                           holiday.description ??
-                                              "No description available",
+                                              "Không có mô tả khả dụng",
                                           style: Theme.of(context)
                                               .textTheme
                                               .headline

@@ -262,7 +262,7 @@ app.post('/addAssignment', async (req: express.Request, res: express.Response) =
 
 app.get('/jsonModel', async (req: express.Request, res: express.Response) => {
     try {
-        db.collection("Schools").doc("India").collection("AMBE001").doc("Login").collection("Student").doc("5YBx4YxiQoVQNsKhtj1P").get().then((success) => {
+        db.collection("Schools").doc("India").collection("AMBE001").doc("Login").collection("Student").doc("SW6J8fOGLbKphg9NJ4A9").get().then((success) => {
             var inJson = Object.assign(success.data(), { id: success.id });
             res.status(HttpStatus.OK).json(inJson);
         }, (failure) => {

@@ -110,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         // CustomLoginTypeBtn(),
                         CustomRadioButton(
-                          // horizontal: true,
+                          horizontal: true,
                           unSelectedColor: Theme.of(context).canvasColor,
                           buttonLables: ['Sinh viên', 'Phụ huynh/Giảng viên'],
                           buttonValues: [UserType.STUDENT, UserType.TEACHER],

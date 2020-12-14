@@ -36,17 +36,15 @@ class _FeesPageState extends State<FeesPage>
             children: <Widget>[
               Center(
                 child: Text(
-                  'Total Fees Due',
+                  'Tổng học phí',
                   style: ktitleStyle,
                 ),
               ),
               Center(
                 child: Text(
-                  'INR 21,000',
+                  '1.000.000đ',
                   style: ktitleStyle.copyWith(
-                    fontSize: 30,
-                    color: Theme.of(context).primaryColor
-                  ),
+                      fontSize: 30, color: Theme.of(context).primaryColor),
                 ),
               ),
             ],
@@ -55,17 +53,15 @@ class _FeesPageState extends State<FeesPage>
             children: <Widget>[
               Center(
                 child: Text(
-                  'Total Fees Paid',
+                  'Tổng học phí',
                   style: ktitleStyle,
                 ),
               ),
               Center(
                 child: Text(
-                  'INR 10,000',
-                  style: ktitleStyle.copyWith(
-                    fontSize: 30,
-                    color: Colors.green
-                  ),
+                  '1.000.000đ',
+                  style:
+                      ktitleStyle.copyWith(fontSize: 30, color: Colors.green),
                 ),
               ),
             ],

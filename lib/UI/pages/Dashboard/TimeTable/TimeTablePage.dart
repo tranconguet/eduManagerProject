@@ -9,12 +9,12 @@ class TimeTablePage extends StatefulWidget {
 }
 
 const List<String> tabNames = const <String>[
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thrusday',
-  'Friday',
-  'Saturday'
+  'Thứ hai',
+  'Thứ ba',
+  'Thứ tư',
+  'Thứ năm',
+  'Thứ sáu',
+  'Thứ bảy'
 ];
 
 class _TimeTablePageState extends State<TimeTablePage>
@@ -90,7 +90,7 @@ class _TimeTablePageState extends State<TimeTablePage>
                           color: teacher ? color : Colors.white,
                           child: Center(
                             child: Text(
-                              'Teachers',
+                              'Giảng viên',
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w700,
@@ -112,7 +112,7 @@ class _TimeTablePageState extends State<TimeTablePage>
                           color: !teacher ? color : Colors.white,
                           child: Center(
                             child: Text(
-                              'Students',
+                              'Học sinh',
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w700,

@@ -21,8 +21,9 @@ class ECardPage extends StatefulWidget {
 class _ECardPageState extends State<ECardPage> {
   @override
   Widget build(BuildContext context) {
-    UserType userType =
-        widget.user == null ? Provider.of<UserType>(context, listen: false) : UserType.STUDENT;
+    UserType userType = widget.user == null
+        ? Provider.of<UserType>(context, listen: false)
+        : UserType.STUDENT;
     return BaseView<ProfilePageModel>(
       onModelReady: (model) =>
           widget.user == null ? model.getUserProfileData() : model,
@@ -118,7 +119,7 @@ class _ECardPageState extends State<ECardPage> {
                             ProfileFieldsECard(
                               width: MediaQuery.of(context).size.width,
                               labelText: userType == UserType.PARENT
-                                  ? "Childrens Name.."
+                                  ? "Tên con .."
                                   : string.guardian_name,
                               initialText: user.guardianName,
                             ),

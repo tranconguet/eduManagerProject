@@ -44,7 +44,8 @@ class _SettingPageState extends State<SettingPage> {
                   context: context,
                   icon: FontAwesomeIcons.user,
                   onTap: () {
-                    UserType userType = Provider.of<UserType>(context, listen: false);
+                    UserType userType =
+                        Provider.of<UserType>(context, listen: false);
                     if (userType == UserType.PARENT) {
                       kopenPage(context, GuardianProfilePage());
                     } else {
@@ -58,9 +59,10 @@ class _SettingPageState extends State<SettingPage> {
                   icon: FontAwesomeIcons.signOutAlt,
                   onTap: () async {
                     await model.logoutUser();
-                    Navigator.pushReplacement(context, MaterialPageRoute(
-                      builder: (context) => WelcomeScreen()
-                    ),);
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => WelcomeScreen()),
+                    );
                     // Navigator.pushNamedAndRemoveUntil(
                     //     context, WelcomeScreen.id, (r) => false);
                   },
@@ -79,7 +81,7 @@ class _SettingPageState extends State<SettingPage> {
                     kopenPage(context, ForgotPasswordPage());
                   },
                   subtitle: string.send_recovery_mail,
-                  title: 'Forgot Password'),
+                  title: 'Quên mật khẩu'),
               settingTiles(
                   context: context,
                   icon: Icons.contact_mail,

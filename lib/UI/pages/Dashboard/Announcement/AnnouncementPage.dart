@@ -95,7 +95,8 @@ class _AnnouncementPageState extends State<AnnouncementPage>
                     child: FloatingActionButton(
                       elevation: 12,
                       onPressed: () {
-                        kopenPageSlide(context, CreateAnnouncement(), duration: Duration(milliseconds: 200));
+                        kopenPageSlide(context, CreateAnnouncement(),
+                            duration: Duration(milliseconds: 200));
                       },
                       child: Icon(Icons.add),
                       backgroundColor: Colors.red,
@@ -159,7 +160,7 @@ class _AnnouncementPageState extends State<AnnouncementPage>
                           : Container(
                               child: Center(
                                 child: Text(
-                                  'No Posts available....!',
+                                  'Hiện tại không có thông báo nào ...',
                                   style: ksubtitleStyle.copyWith(fontSize: 25),
                                 ),
                               ),
